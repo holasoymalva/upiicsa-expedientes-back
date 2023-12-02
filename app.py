@@ -1,8 +1,5 @@
 from flask import Flask, request, jsonify
 
-# from utils.hasMutation import hasMutation
-
-
 import sqlite3
 
 conn = sqlite3.connect('./upiicsa.sqlite3', check_same_thread=False)
@@ -30,13 +27,6 @@ def status():
 
 @app.route('/mutation', methods=['POST'])
 def check_mutation():
-    dna = request.json.get('dna')
-    # if hasMutation(dna):
-    #     c.execute("INSERT INTO dna_records (dna, is_mutated) VALUES (?, ?)", ("".join(dna), True))
-    #     conn.commit()
-    #     return jsonify({'message': 'Mutacion detectada'}), 200
-    # else:
-    #     return jsonify({'message': 'No se ha detectado mutacion'}), 403
     pass
 
 @app.route('/stats', methods=['GET'])
